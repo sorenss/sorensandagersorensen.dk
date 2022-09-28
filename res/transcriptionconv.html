@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style/s_hjemmeside_css.css" />
+    <meta charset="UTF-8">
+    <title>Typo3 Transcript Converter</title>
+    <script src="js/s_script.js"></script>
+</head>
+<body>
+
+<script>
+function setCharAt(str,index,chr) {
+    if(index > str.length-1) return str;
+    return str.substring(0,index) + chr + str.substring(index+1);
+}
+
+function toText() {
+  var html = document.getElementById("html").value;
+  var text = html;
+  var length = html.length;
+  var textPos = 0;
+  for (let i = 0; i <= length; i++) {
+    if (html[i] == "<" && html[i+1] == "b"){
+      text = setCharAt(text,textPos,"\n");
+      i = i + 6;
+    } else if (html[i] == "&" && html[i+1] == "n"){
+      text = setCharAt(text,textPos," ");
+      i = i + 5;
+    } else if (html[i] == undefined){
+      len = text.length;
+      for (let p = 0; p < len; p++) {
+      text = setCharAt(text,textPos,"_");
+      textPos++;
+      }
+    } else {
+      text = setCharAt(text,textPos,html[i]);
+    }
+  textPos++;
+  }
+  document.getElementById("text").value = text;
+}
+
+function toHtml() {
+  var text = document.getElementById("text").value;
+  var html = text;
+  var length = text.length;
+  var htmlPos = 0;
+  for (let i = 0; i <= length; i++) {
+    if (text[i] == "\n") {
+      html = setCharAt(html,htmlPos,"<br />\n");
+      htmlPos = htmlPos + 6;
+      }
+    if (text[i] == " ") {
+      html = setCharAt(html,htmlPos,"&nbsp;");
+      htmlPos = htmlPos + 5;
+      }
+    htmlPos++;
+  }  
+  document.getElementById("html").value = html;
+}
+</script>
+
+<div id="top">
+    <div id="navnIHjørnet">
+        <p><a href="index.html">Søren Sandager Sørensen</a></p>
+    </div>
+
+    <div id="menu">
+        <div id="menupunkt" onclick=window.location="index.html">
+            <p><a>Home</a></p>
+        </div>
+
+        <div id="menupunkt" onclick=window.location="CV.html">
+            <p><a>CV</a></p>
+        </div>
+
+        <div id="menupunkt" onclick=window.location="publications.html">
+            <p><a>Publications</a></p>
+        </div>
+
+        <div id="menupunkt" onclick=window.location="resources.html">
+            <p><a>Resources</a></p>
+        </div>
+
+        <div id="menupunkt" onclick=window.location="contact.html">
+            <p><a>Contact</a></p>
+        </div>
+
+    </div>
+
+</div>
+
+<div id="CVintro">
+    <img src="billeder/soeren-kvadrat.jpg" alt="Et billede af Søren" id="CVimg">
+<table>
+    <tr>
+        <td>E-mail (AU):</td>
+        <td>201204617 AT post.au.dk</td>
+    </tr>
+    <tr>
+        <td>LinkedIn:</td>
+        <td><a href="https://www.linkedin.com/in/s%C3%B8ren-sandager-s%C3%B8rensen-6360a692/">Profile</a></td>
+    </tr>
+    <tr>
+        <td>Birthday:</td>
+        <td>3. november 1992, <span id="alder"></span> years old</td>
+    </tr>
+
+</table>
+</div>
+
+<div id="shortCV">
+    <h1 id="CVoverskrift">Transcription converter for Samtalegrammatik.dk</h1>
+
+    <p>This is used for formatting transcripts in Typo3 for <a href="https://samtalegrammatik.dk">Samtalegrammatik.dk</a>. The left text field can be converted to the relevant HTML in the right text field, and vice versa. </p>
+    
+<div style="width: 100%; display: table;">
+ <div style="display: table-row; height: 100px;">
+  <div style="width: 40%; display: table-cell;">
+   <form name="form1">
+    <textarea id="text" name="text" style="width: 500px" rows="30">Text here</textarea>
+   </form>
+  </div>
+  <div style="display: table-cell;"> 
+   <form name="form2">
+    <textarea id="html" style="width: 700px" rows="30">Html here</textarea>
+   </form>
+  </div>
+ </div>
+  <div style="width: 50%; display: table-cell;">
+   <button onclick="toText()">Text&#60;&#60;</button>
+  </div>
+  <div style="display: table-cell;">
+   <button onclick="toHtml()">&#62;&#62; Html</button>
+  </div>
+</div>
+</div>
+
+<div id="fullCV">
+<p>Notes:</p>
+    <ul>
+        <li>No support for underlining or bolding.</li>
+        <li>Replaces ALL spaces (including those in the speech) with &amp;nbsp;.</li>
+        <li>Leaves the visible line breaks in the HTML for ease of reading, but they will likely not be saved in Typo3.</li>
+        <li>Converting to text will leave a trail of underscores - they can be deleted.</li>
+</ul>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+<script type='text/javascript'>
+
+//_______ALDER_______//
+    function udregnAlder(dob) {
+        let diff_ms = Date.now() - dob.getTime();
+        let age_dt = new Date(diff_ms);
+
+        return Math.abs(age_dt.getUTCFullYear() - 1970);
+    }
+    document.getElementById("alder").innerText = udregnAlder(new Date(1992, 11, 3));
+
+</script>
+
+</body>
+</html>

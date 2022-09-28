@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style/s_hjemmeside_css.css"/>
+    <meta charset="UTF-8">
+    <title>Publications</title>
+</head>
+<body>
+
+<div id="top">
+    <div id="navnIHjørnet">
+        <p><a href="index.html">Søren Sandager Sørensen</a></p>
+    </div>
+
+    <div id="menu">
+        <div id="menupunkt" onclick=window.location="index.html">
+            <p><a>Home</a></p>
+        </div>
+
+        <div id="menupunkt" onclick=window.location="CV.html">
+            <p><a>CV</a></p>
+        </div>
+
+        <div id="menupunkt" onclick=window.location="publications.html">
+            <p><a>Publications</a></p>
+        </div>
+		
+        <div id="menupunkt" onclick=window.location="presentations.html">
+            <p><a>Presentations</a></p>
+        </div>
+
+        <div id="menupunkt" onclick=window.location="resources.html">
+            <p><a>Resources</a></p>
+        </div>
+
+        <div id="menupunkt" onclick=window.location="contact.html">
+            <p><a>Contact</a></p>
+        </div>
+
+    </div>
+
+</div>
+
+<h1 id="kontaktOverskrift">Contact me</h1>
+
+<div id="kontaktSide">
+<p>Contact me at linsss AT cc DOT au DOT dk.</p>
+<p>You can also find or follow me on these sites:</p>
+<ul>
+    <li><a href="http://pure.au.dk/portal/da/linsss@cc.au.dk">Aarhus University Profile</a></li>
+    <li><a href="https://scholar.google.dk/citations?user=hQ3j0a4AAAAJ&hl">Google Scholar</a></li>
+    <li><a href="https://orcid.org/0000-0001-7843-566X">ORCID</a></li>
+    <li><a href="https://www.researchgate.net/profile/Soren-Sorensen-13">Researchgate</a></li>
+    <li><a href="http://www.samtalegrammatik.dk">Samtalegrammatik.dk</a> for DanTIN's project which I'm part of</li>
+    <li>Twitter: <a href="https://twitter.com/DanTIN_Grammar">@DanTIN_grammar</a> or <a href="https://twitter.com/sandagersorense">@sandagersorense</a></li>
+    <li>Instagram: <a href="https://www.instagram.com/sandagersorensen/">@sandagersorensen</a></li>
+    <li><a href="https://www.linkedin.com/in/s%C3%B8ren-sandager-s%C3%B8rensen-6360a692/">LinkedIn</a></li>
+
+</ul>
+</div>
+
+<script type='text/javascript'>
+
+    //_______ALDER_______//
+    function udregnAlder(dob) {
+        let diff_ms = Date.now() - dob.getTime();
+        let age_dt = new Date(diff_ms);
+
+        return Math.abs(age_dt.getUTCFullYear() - 1970);
+    }
+    document.getElementById("alder").innerText = udregnAlder(new Date(1992, 11, 3));
+
+    let homelink = document.querySelector('.homelink');
+    homelink.addEventListener(onclick, function(e) {
+        window.location = "s_hjemmeside.html";
+    })
+
+</script>
+
+</body>
+</html>

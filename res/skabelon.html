@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style/s_hjemmeside_css.css" />
+    <meta charset="UTF-8">
+    <title>PAGE TITLE</title>
+    <script src="js/s_script.js"></script>
+</head>
+<body>
+
+<div id="top">
+    <div id="navnIHjørnet">
+        <p><a href="index.html">Søren Sandager Sørensen</a></p>
+    </div>
+
+    <div id="menu">
+        <div id="menupunkt" onclick=window.location="index.html">
+            <p><a>Home</a></p>
+        </div>
+
+        <div id="menupunkt" onclick=window.location="CV.html">
+            <p><a>CV</a></p>
+        </div>
+
+        <div id="menupunkt" onclick=window.location="publications.html">
+            <p><a>Publications</a></p>
+        </div>
+
+        <div id="menupunkt" onclick=window.location="presentations.html">
+            <p><a>Presentations</a></p>
+        </div>
+
+        <div id="menupunkt" onclick=window.location="resources.html">
+            <p><a>Resources</a></p>
+        </div>
+
+        <div id="menupunkt" onclick=window.location="contact.html">
+            <p><a>Contact</a></p>
+        </div>
+
+    </div>
+
+</div>
+
+<div id="CVintro">
+    <img src="billeder/soeren-kvadrat.jpg" alt="Et billede af Søren" id="CVimg">
+<table>
+    <tr>
+        <td>E-mail (AU):</td>
+        <td>201204617 AT post.au.dk</td>
+    </tr>
+    <tr>
+        <td>LinkedIn:</td>
+        <td><a href="https://www.linkedin.com/in/s%C3%B8ren-sandager-s%C3%B8rensen-6360a692/">Profile</a></td>
+    </tr>
+    <tr>
+        <td>Birthday:</td>
+        <td>3. november 1992, <span id="alder"></span> years old</td>
+    </tr>
+
+</table>
+</div>
+
+<p id="tekstCV"><br>tekst</p>
+
+<div id="shortCV">
+    <h1 id="CVoverskrift">Overskrift</h1>
+    <div id="shortDegree">
+<h3 id="CVunderoverskrift">Left</h3>
+<ul>
+    <li>List</li>
+    <li>List</li>
+    <li>List</li>
+    <li>List</li>
+</ul>
+    </div>
+    <div id="shortSelect">
+    <h3 id="CVunderoverskrift">Right</h3>
+    <ul>
+        <li>List</li>
+        <li>List</li>
+        <li>List</li>
+        <li>List</li>
+</ul>
+    </div>
+</div>
+
+<div id="fullCV">
+    <h1 id="CVoverskrift">Overskrift</h1>
+
+        <h3 id="CVunderoverskrift">Underoverskrift</h3>
+            <table id="degree" class="CVtable">
+            </table>
+        <h3 id="CVunderoverskrift">Underoverskrift</h3>
+            <table id="aow" class="CVtable">
+            </table>
+        <h3 id="CVunderoverskrift">Underoverskrift</h3>
+            <table id="languages" class="CVtable">
+                <tr><td>Danish (native)</td></tr>
+                <tr><td>English (for all purposes)</td></tr>
+                <tr><td>German (reading and light conversation)</td></tr>
+                <tr><td>Greek, Latin (academic knowledge)</td></tr>
+                <tr><td>Introductory courses in Dutch, Arabic and Cree</td></tr>
+            </table>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+<script type='text/javascript'>
+
+//_______ALDER_______//
+    function udregnAlder(dob) {
+        let diff_ms = Date.now() - dob.getTime();
+        let age_dt = new Date(diff_ms);
+
+        return Math.abs(age_dt.getUTCFullYear() - 1970);
+    }
+    document.getElementById("alder").innerText = udregnAlder(new Date(1992, 11, 3));
+
+</script>
+
+</body>
+</html>

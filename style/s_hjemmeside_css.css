@@ -1,0 +1,212 @@
+/* Sætter baggrundsfarve og skrifttype + farve */
+body {
+    /*background-color: rgba(40, 40, 42, 0.99);*/
+    background-color: rgba(232, 232, 232, 0.8);
+    /*color: #c1c1c1;*/
+    color: #28282a;
+    font-family: Baskerville;
+    font-size: 16pt;
+}
+
+/* Style for top/menu */
+#top {
+    border: solid 7px transparent;
+    /*border-bottom-color: rgba(46, 46, 46, 0.64);*/
+    border-bottom-color: rgba(22, 40, 69, 0.81);
+    vertical-align: auto;
+    margin-top: -1%;
+    /*background-color: rgba(41, 65, 68, 0.64);*/
+    background-color: #e8e8e8;
+    width: 99%;
+}
+
+/*Tekst i menuen*/
+#top a {
+    text-decoration: none;
+    color: #162845;
+    font-weight: normal;
+}
+
+/*størrelse på elementet navn-i-hjørnet*/
+#navnIHjørnet {
+    display: inline-block;
+    width: 24%;
+    margin-bottom: -1%;
+}
+
+/*teksten for navnet i hjørnet*/
+#navnIHjørnet p {
+    font-family: Baskerville;
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+
+#menu {
+    width: 73%;
+    font-family: Baskerville;
+    font-size: 18pt;
+    color: black;
+    float: right;
+    margin-top: 1.1%;
+    position: relative;
+}
+
+
+#menupunkt {
+    display: inline-block;
+    width: 15%;
+    text-align: center;
+    background-color: transparent;
+    /*transition: background-color 500ms linear;*/
+}
+
+#menupunkt:hover {
+    background-color: rgba(22, 40, 69, 0.31);
+}
+
+#forside {
+    vertical-align: top;
+}
+
+#forside {
+    font-size: 16pt;
+}
+
+#billedForside {
+    width: 25%;
+    padding-top: 1%;
+    padding-right: 3%;
+    float: left;
+}
+
+#overskriftForside {
+    padding-top: 1%;
+}
+
+#tekstForside {
+    width:65%;
+    line-height: 150%;
+}
+
+#CVoverskrift {
+    padding: 1%;
+}
+
+.CVtable, #testdiv {
+    border-spacing: 30px;
+    text-align: left;
+    margin-right: auto;
+    margin-top: -1.5%;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.CVtable tr {
+    height: 40px;
+}
+
+.CVtable td:first-child {
+    width: 170px;
+}
+
+#CVunderoverskrift {
+    border-bottom: 1px rgba(43, 43, 43, 0.86) solid;
+    color: rgb(43, 43, 43);
+    width: 40%;
+    margin-left: 2%;
+}
+
+#CVintro {
+    margin-left: 2%;
+    margin-top: 2%;
+    height: 200px;
+    line-height: 65px;
+}
+
+#shortCV {
+    display: inline-block;
+    vertical-align: top;
+    float: snap;
+    width: 100%;
+}
+
+#shortDegree {
+    display: inline-block;
+    vertical-align: top;
+
+    width: 49%;
+}
+
+#shortSelect {
+    display: inline-block;
+    vertical-align: top;
+
+    width: 49%;
+}
+
+#CVimg {
+    border-radius: 50%;
+    width: 200px;
+    border: rgba(125, 125, 125, 0.75) 3px solid;
+    float: left;
+    margin-right: 5%;
+}
+
+.pubTable {
+    top: 0;
+    border-spacing: 30px;
+    margin-right: auto;
+    margin-top: -1.5%;
+    width: 100%;
+    table-layout: fixed;
+    height: 50%;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.pubTable tr {
+    height: 40px;
+}
+
+#billedside img {
+    width: 300px;
+    height: 300px;
+    margin: 3%;
+    box-shadow: 0 0 6px 4px rgba(30, 30, 32, 0.63);
+}
+
+/*
+#billedside img:hover {
+    width: 450px;
+    height: 450px;
+    margin: 3%;
+}*/
+
+#tekstPub {
+    margin-left: 3%;
+    width: 50%;
+}
+
+#kontaktOverskrift {
+    margin: 4%;
+}
+
+#kontaktSide {
+    margin-left: 6%;
+    font-size: 16pt;
+}
+
+#kontaktSide a {
+    font-weight: normal;
+}
+
+#kontaktSide a:hover {
+    font-weight: bold;
+}
+
+#tekstCV {
+    margin-left: 3%;
+    width: 50%;
+}
