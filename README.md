@@ -1,2 +1,2 @@
 # soerensandagersoerensen.dk
-My personal website
+Personal website of Søren Sandager Sørensen
