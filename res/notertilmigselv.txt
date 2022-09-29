@@ -1,0 +1,3 @@
+Gå ind i nordicways terminal og brug "git pull" til at opdatere
+
+for at starte det, skal ALT være slettet i mappen public_html før man kan git clone.
