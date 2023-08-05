@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="/style/s_hjemmeside_css.css">
+    <meta charset="UTF-8">
+    <title>PAGE TITLE</title>
+    <script src="js/s_script.js"></script>
+  </head>
+  <body>
+    <!-- Version for top-level pages 
+&amp;lt;div id=&amp;quot;top&amp;quot;&amp;gt;
+    &amp;lt;div id=&amp;quot;navnIHjørnet&amp;quot;&amp;gt;
+        &amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;index.html&amp;quot;&amp;gt;Søren Sandager Sørensen&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+    &amp;lt;div id=&amp;quot;menu&amp;quot;&amp;gt;
+        &amp;lt;div id=&amp;quot;menupunkt&amp;quot; onclick=window.location=&amp;quot;index.html&amp;quot;&amp;gt;
+            &amp;lt;p&amp;gt;&amp;lt;a&amp;gt;Home&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+        &amp;lt;/div&amp;gt;
+
+        &amp;lt;div id=&amp;quot;menupunkt&amp;quot; onclick=window.location=&amp;quot;CV.html&amp;quot;&amp;gt;
+            &amp;lt;p&amp;gt;&amp;lt;a&amp;gt;CV&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+        &amp;lt;/div&amp;gt;
+
+        &amp;lt;div id=&amp;quot;menupunkt&amp;quot; onclick=window.location=&amp;quot;publications.html&amp;quot;&amp;gt;
+            &amp;lt;p&amp;gt;&amp;lt;a&amp;gt;Publications&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+        &amp;lt;/div&amp;gt;
+
+        &amp;lt;div id=&amp;quot;menupunkt&amp;quot; onclick=window.location=&amp;quot;presentations.html&amp;quot;&amp;gt;
+            &amp;lt;p&amp;gt;&amp;lt;a&amp;gt;Presentations&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+        &amp;lt;/div&amp;gt;
+
+        &amp;lt;div id=&amp;quot;menupunkt&amp;quot; onclick=window.location=&amp;quot;resources.html&amp;quot;&amp;gt;
+            &amp;lt;p&amp;gt;&amp;lt;a&amp;gt;Resources&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+        &amp;lt;/div&amp;gt;
+
+        &amp;lt;div id=&amp;quot;menupunkt&amp;quot; onclick=window.location=&amp;quot;contact.html&amp;quot;&amp;gt;
+            &amp;lt;p&amp;gt;&amp;lt;a&amp;gt;Contact&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+        &amp;lt;/div&amp;gt;
+
+    &amp;lt;/div&amp;gt;
+
+&amp;lt;/div&amp;gt; -->
+    <!-- Version for pages in a subfolder, such as this page; diff is a slash -->
+    <div id="top">
+      <div id="navnIHjørnet">
+        <p><a href="/index.html">Søren Sandager Sørensen</a></p>
+      </div>
+      <div id="menu">
+        <div id="menupunkt" onclick='window.location="' index=""
+          class="html&quot;">
+          <p><a>Home</a></p>
+        </div>
+        <div id="menupunkt" onclick='window.location="' cv=""
+          class="html&quot;">
+          <p><a>CV</a></p>
+        </div>
+        <div id="menupunkt" onclick='window.location="' publications=""
+          class="html&quot;">
+          <p><a>Publications</a></p>
+        </div>
+        <div id="menupunkt" onclick='window.location="' presentations=""
+          class="html&quot;">
+          <p><a>Presentations</a></p>
+        </div>
+        <div id="menupunkt" onclick='window.location="' resources=""
+          class="html&quot;">
+          <p><a>Resources</a></p>
+        </div>
+        <div id="menupunkt" onclick='window.location="' contact=""
+          class="html&quot;">
+          <p><a>Contact</a></p>
+        </div>
+      </div>
+    </div>
+    <div id="CVintro"> <img src="billeder/soeren-kvadrat.jpg" alt="Et
+        billede af Søren" id="CVimg">
+      <table>
+        <tbody>
+          <tr>
+            <td>E-mail:</td>
+            <td>EMAIL</td>
+          </tr>
+          <tr>
+            <td>LinkedIn:</td>
+            <td><a
+                href="https://www.linkedin.com/in/s%C3%B8ren-s-6360a692/">Profile</a></td>
+          </tr>
+          <tr>
+            <td>Birthday:</td>
+            <td>3. november 1992, <span id="alder"></span> years old</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p id="tekstCV"><br>
+      tekst</p>
+    <div id="shortCV">
+      <h1 id="CVoverskrift">How to install citation.js</h1>
+      <p>The guides make it sound like you need to install through <i>npm
+
+
+
+
+
+        </i> (which I can't), but that turns out not to be the case. </p>
+      <p>I found the citation.js-file (probably the one at&nbsp;<a
+href="https://cdn.jsdelivr.net/gh/larsgw/citation.js@archive/citation.js/citation-0.4.0-9.js">https://cdn.jsdelivr.net/gh/larsgw/citation.js@archive/citation.js/citation-0.4.0-9.js</a>),
+
+
+
+
+
+        saved it. I could not make the bundles with plugins work
+        (something about the Cite constructor not being a
+        constructor...). &nbsp;</p>
+      <p>Then I followed this template: <a
+          href="https://runkit.com/larsgw/591b5651bd9b40001113931c">https://runkit.com/larsgw/591b5651bd9b40001113931c</a>
+        but to use multiple Wikidata IDs (Q), you have to put them in
+        square brackets. E.g.<code>&nbsp;let example = new
+          Cite(['Q121071205','Q106128941'])</code>.<br>
+      </p>
+      <p>This means that the HTML page with the citation contains the
+        following in the &lt;head&gt;-tag:<br>
+      </p>
+      <p><code>&lt;script&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; const Cite =
+          require('citation-js')<br>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; let example = new
+          Cite(['Q121071205','Q106128941'])<br>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; let output =
+          example.format('bibliography', {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; format: 'html',<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; template: 'apa',<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lang: 'en-US'<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; })<br>
+          &nbsp;&nbsp;&nbsp; &lt;/script&gt;<br>
+          <br>
+        </code></p>
+      <p>and then on the page, where i want citation to appear, I have:</p>
+      <p><code>&nbsp;</code>&lt;script&gt;<br>
+      </p>
+      document.write(output);<br>
+      &lt;/script&gt;</div>
+    <script type="text/javascript">
+
+//_______ALDER_______//
+    function udregnAlder(dob) {
+        let diff_ms = Date.now() - dob.getTime();
+        let age_dt = new Date(diff_ms);
+
+        return Math.abs(age_dt.getUTCFullYear() - 1970);
+    }
+    document.getElementById("alder").innerText = udregnAlder(new Date(1992, 11, 3));
+
+</script>
+  </body>
+</html>
