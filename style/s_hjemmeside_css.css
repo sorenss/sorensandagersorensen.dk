@@ -37,7 +37,7 @@ body {
 /*teksten for navnet i hjørnet*/
 #navnIHjørnet p {
     font-family: Baskerville;
-    font-size: 24pt;
+    font-size: 30pt;
     font-weight: bold;
 }
 
@@ -55,7 +55,7 @@ body {
 
 #menupunkt {
     display: inline-block;
-    width: 15%;
+    width: 30%;
     text-align: center;
     background-color: transparent;
     /*transition: background-color 500ms linear;*/
