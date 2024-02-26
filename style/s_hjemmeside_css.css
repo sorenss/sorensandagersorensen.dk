@@ -1,4 +1,4 @@
-/* Sætter baggrundsfarve og skrifttype + farve */
+/* Satter baggrundsfarve og skrifttype + farve */
 body {
     /*background-color: rgba(40, 40, 42, 0.99);*/
     background-color: rgba(232, 232, 232, 0.8);
@@ -27,15 +27,15 @@ body {
     font-weight: normal;
 }
 
-/*størrelse på elementet navn-i-hjørnet*/
-#navnIHjørnet {
+/*sterrelse på elementet navn-i-hjernet*/
+#navnIHjornet {
     display: inline-block;
     width: 24%;
     margin-bottom: -1%;
 }
 
-/*teksten for navnet i hjørnet*/
-#navnIHjørnet p {
+/*teksten for navnet i hjornet*/
+#navnIHjornet p {
     font-family: Baskerville;
     font-size: 30pt;
     font-weight: bold;
